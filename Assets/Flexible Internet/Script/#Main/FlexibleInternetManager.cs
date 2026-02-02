@@ -504,6 +504,69 @@ public class FlexibleInternetManager : MonoBehaviour
         StartCoroutine(CheckConnectionRoutine(url, callback));
     }
 
+    /// <summary>
+    /// Add a single URL to existing check URLs (no duplicates)
+    /// </summary>
+    public void AddCheckUrl(string url)
+    {
+        if (string.IsNullOrWhiteSpace(url))
+        {
+            Log("AddCheckUrl failed: URL is empty");
+            return;
+        }
+
+        if (!Uri.IsWellFormedUriString(url, UriKind.Absolute))
+        {
+            Log($"AddCheckUrl failed: Invalid URL → {url}");
+            return;
+        }
+
+        var list = new System.Collections.Generic.List<string>(checkUrls);
+
+        if (list.Contains(url))
+        {
+            Log($"URL already exists: {url}");
+            return;
+        }
+
+        list.Add(url);
+        checkUrls = list.ToArray();
+
+        Log($"Added check URL: {url}");
+    }
+
+    /// <summary>
+    /// Replace all check URLs with a new array
+    /// </summary>
+    public void ReplaceCheckUrls(string[] urls)
+    {
+        if (urls == null || urls.Length == 0)
+        {
+            Log("ReplaceCheckUrls failed: URL list is null or empty");
+            return;
+        }
+
+        var validUrls = new System.Collections.Generic.List<string>();
+
+        foreach (var url in urls)
+        {
+            if (string.IsNullOrWhiteSpace(url)) continue;
+            if (!Uri.IsWellFormedUriString(url, UriKind.Absolute)) continue;
+            if (!validUrls.Contains(url))
+                validUrls.Add(url);
+        }
+
+        if (validUrls.Count == 0)
+        {
+            Log("ReplaceCheckUrls failed: No valid URLs found");
+            return;
+        }
+
+        checkUrls = validUrls.ToArray();
+
+        Log($"Replaced check URLs. Total: {checkUrls.Length}");
+    }
+
     #endregion Public Methods
 
     #region Strategy: Browser API

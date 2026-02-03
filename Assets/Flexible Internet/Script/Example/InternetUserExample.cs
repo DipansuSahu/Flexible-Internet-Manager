@@ -7,7 +7,7 @@ public class InternetUserExample : MonoBehaviour
     [SerializeField] private TMP_Text statusText;
     [SerializeField] private Image statusIcon;
 
-    private void Start()
+    private void Awake()
     {
         FlexibleInternetManager.Instance.OnInternetConnected += OnConnected;
         FlexibleInternetManager.Instance.OnInternetDisconnected += OnDisconnected;

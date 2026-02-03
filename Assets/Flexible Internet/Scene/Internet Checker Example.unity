@@ -615,38 +615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
-  m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &1797678367
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,58 +745,51 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976,
-        type: 3}
+    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
       propertyPath: m_LocalPosition.x
       value: 986.631
       objectReference: {fileID: 0}
-    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976,
-        type: 3}
+    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
       propertyPath: m_LocalPosition.y
       value: 558.54675
       objectReference: {fileID: 0}
-    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976,
-        type: 3}
+    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
       propertyPath: m_LocalPosition.z
       value: 5.793054
       objectReference: {fileID: 0}
-    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976,
-        type: 3}
+    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976,
-        type: 3}
+    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976,
-        type: 3}
+    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976,
-        type: 3}
+    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976,
-        type: 3}
+    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976,
-        type: 3}
+    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976,
-        type: 3}
+    - target: {fileID: 2690003173225706978, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8062387486409384698, guid: 384cac9dc4c432942a61c742a50d1976,
-        type: 3}
+    - target: {fileID: 3821666618251478627, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
+      propertyPath: strategy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062387486409384698, guid: 384cac9dc4c432942a61c742a50d1976, type: 3}
       propertyPath: m_Name
       value: FlexibleInternetManager
       objectReference: {fileID: 0}

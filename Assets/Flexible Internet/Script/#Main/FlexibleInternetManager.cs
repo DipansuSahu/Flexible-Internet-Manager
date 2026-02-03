@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
-using System.Runtime.InteropServices;
 
 /// <summary>
 /// Flexible Internet Check Manager with Multiple Strategies
@@ -110,6 +109,7 @@ public class FlexibleInternetManager : MonoBehaviour
 
     #region Private Variables
 
+    private bool _hasInitialized = false;
     private bool _isConnected = false;
     private bool _isChecking = false;
     private Coroutine _monitoringCoroutine;
@@ -802,7 +802,7 @@ public class FlexibleInternetManager : MonoBehaviour
 
     private void UpdateConnectionStatus(bool newStatus)
     {
-        if (_isConnected != newStatus)
+        if (_isConnected != newStatus || !_hasInitialized)
         {
             _isConnected = newStatus;
 
@@ -818,6 +818,9 @@ public class FlexibleInternetManager : MonoBehaviour
             }
 
             OnConnectionStatusChanged?.Invoke(_isConnected);
+
+            if (!_hasInitialized)
+                _hasInitialized = true;
         }
     }
 

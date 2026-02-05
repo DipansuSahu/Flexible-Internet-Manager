@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InternetUserExample : MonoBehaviour
+public class InternetExample : MonoBehaviour
 {
     [SerializeField] private TMP_Text statusText;
     [SerializeField] private Image statusIcon;

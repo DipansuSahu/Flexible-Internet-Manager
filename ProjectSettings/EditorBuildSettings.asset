@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Flexible Internet/Scene/Internet Checker Example.unity
+    guid: 76bba649a76ec3e47a9f3dd0e1eef6f6
   m_configObjects: {}

@@ -454,6 +454,35 @@ public class FlexibleInternetManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Check internet connection using checkingStrategy (any method)
+    /// </summary>
+    public void CheckInternetConnection(CheckingStrategy checkingStrategy)
+    {
+        switch (checkingStrategy)
+        {
+            case CheckingStrategy.BrowserAPI:
+                CheckWithBrowserAPI();
+                break;
+
+            case CheckingStrategy.UnityAPI:
+                CheckWithUnityAPI();
+                break;
+
+            case CheckingStrategy.HTTP:
+                CheckWithHTTP();
+                break;
+
+            case CheckingStrategy.UnityAndHTTP:
+                CheckWithUnityAndHTTP();
+                break;
+
+            case CheckingStrategy.BrowserAndHTTP:
+                CheckWithBrowserAndHTTP();
+                break;
+        }
+    }
+
+    /// <summary>
     /// Change strategy at runtime
     /// </summary>
     public void SetStrategy(CheckingStrategy newStrategy)
